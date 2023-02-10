@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { DynamicComponent } from './dynamic-component/dynamic-component.component';
+import { DynamicLoader } from './dynamic-loader/dynamic-loader.component';
+import { DynamicLoaderService } from './dynamic-loader.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, DynamicComponent],
+  declarations: [AppComponent, DynamicLoader],
   bootstrap: [AppComponent],
-  providers: [],
+  providers: [DynamicLoaderService],
 })
 export class AppModule {}
